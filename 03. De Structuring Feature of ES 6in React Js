@@ -1,0 +1,41 @@
+import "./App.css";
+
+function App() {
+  const employee = {
+    firstName: "Ramesh",
+    lastName: "Fadatare",
+    emailId: "ramesh@gmail.com",
+  };
+  const first = employee.firstName;
+  const last = employee.lastName;
+
+  //ES6 De-structuring
+  const { firstName, lastName } = employee;
+
+  const recipes = ["Paneer Curry", "Egg Currey", "veg curry"];
+
+  const firstIndex = recipes[0];
+  const SecondIndex = recipes[1];
+
+  //ES6 De-structuring
+  const [firstvalue, , lastvalue] = recipes;
+
+  return (
+    <div className="App">
+      {first}
+      {last}
+      <br />
+      {firstName}
+      {lastName}
+      <br />
+      {firstIndex}
+      {SecondIndex}
+      <br />
+
+      {firstvalue}
+      {lastvalue}
+    </div>
+  );
+}
+
+export default App;
