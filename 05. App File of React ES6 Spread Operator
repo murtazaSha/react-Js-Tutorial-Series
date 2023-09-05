@@ -1,0 +1,34 @@
+import "./App.css";
+
+function App() {
+  const employee = {
+    firstName: "Ramesh",
+    lastName: "Fadatare",
+    emailId: "ramesh@gmail.com",
+  };
+
+  const recipes = ["Paneer Curry", "Egg Currey", "veg curry", "Baryani"];
+
+  const array2 = ["Water", "Milk", "Bread"];
+
+  //rest Operator (...)
+  const [firstIndex, SecondIndexvalue, ...others] = recipes;
+
+  // Spread Operator (...)
+
+  const combineArray = [...recipes, ...array2];
+
+  const UpdateObject = { ...employee, firstName: "Alisha", Address: "US" };
+
+  return (
+    <div className="App">
+      {console.log(...combineArray)}
+      <br />
+      {UpdateObject.firstName}
+      <br />
+      {UpdateObject.Address}
+    </div>
+  );
+}
+
+export default App;
