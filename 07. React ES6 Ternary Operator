@@ -1,0 +1,23 @@
+import "./App.css";
+
+function App() {
+  const employee = {
+    firstName: "Ramesh",
+    lastName: "Fadatare",
+    emailId: "ramesh@gmail.com",
+    age: 29,
+  };
+
+  return (
+    <div className="App">
+      {employee.firstName.includes("Ramesh1")
+        ? "User Exists"
+        : "User does not exist"}
+
+      <br />
+      {employee.age < 20 ? "He is boy" : "He is a Man"}
+    </div>
+  );
+}
+
+export default App;
