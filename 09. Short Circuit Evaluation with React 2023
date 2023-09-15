@@ -1,0 +1,39 @@
+import "./App.css";
+
+function App() {
+  /**
+   
+  In JavaScript, short-circuiting is
+  the evaluation of an expression
+  from left to right with || and && operators.
+   */
+
+  const emp = {
+    age: 20,
+    count: 0,
+  };
+
+  return (
+    <div className="App">
+      {/* 0, '',null, undefined,  */}
+      {2 && 0 && "Working"}
+      <br />
+      {emp.age > 18 && "Working"}
+      <br />
+      {0 || "Working with OR"}
+      <br />
+      {emp.age > 18 || "Working with OR"}
+
+      {console.log(emp.age > 18)}
+      <br />
+      {emp.grade || "Working with OR grade"}
+
+      <br />
+      {emp.count || "Working with OR count"}
+      <br />
+      {null ?? "Working with count"}
+    </div>
+  );
+}
+
+export default App;
