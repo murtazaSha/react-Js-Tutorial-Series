@@ -1,0 +1,27 @@
+import "./App.css";
+
+function App() {
+  const user = {
+    Details: {
+      name: "Tommy",
+      surname: "Smith",
+      age: 21,
+      subscriptionDetails: {
+        type: "premium",
+        price: 12.99,
+      },
+    },
+  };
+
+  return (
+    <div className="App">
+      {user.Details.name}
+      <br />
+      {user.Details.age}
+      <br />
+      {user.Details.subscriptionDetails?.type}
+    </div>
+  );
+}
+
+export default App;
