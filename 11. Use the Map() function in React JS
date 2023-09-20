@@ -1,0 +1,30 @@
+import "./App.css";
+
+function App() {
+  const data = [
+    { id: 1, name: "John Doe" },
+    { id: 2, name: "Victor Wayne" },
+    { id: 3, name: "Jane Doe" },
+  ];
+
+  return (
+    <div className="App">
+      {data.map((user) => (
+        <div>{user.id * 2}</div>
+      ))}
+      <br />
+      {data.map((user) => (
+        <div>{user.name}</div>
+      ))}
+
+      <br />
+      {data.map((user) => (
+        <div>
+          {user.id === 2 ? (user.name = "Developers Dairy") : user.name}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default App;
