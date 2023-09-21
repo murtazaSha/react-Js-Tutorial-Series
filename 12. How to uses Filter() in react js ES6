@@ -1,0 +1,27 @@
+import "./App.css";
+
+function App() {
+  const names = ["Ringo", "George", "James", "John", "Paul"];
+
+  const people = [
+    { name: "James", age: 31 },
+    { name: "John", age: 45 },
+    { name: "Paul", age: 65 },
+    { name: "Ringo", age: 49 },
+    { name: "George", age: 34 },
+  ];
+
+  return (
+    <div className="App">
+      {names.filter((user) => user.includes("g"))}
+      {console.log(people.filter((user) => user.age < 45))}
+      {people
+        .filter((user) => user.age < 45)
+        .map((person) => (
+          <div>{person.name}</div>
+        ))}
+    </div>
+  );
+}
+
+export default App;
