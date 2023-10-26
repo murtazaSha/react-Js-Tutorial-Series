@@ -1,0 +1,46 @@
+import "./App.css";
+
+function App() {
+  const ArrayNumber = [100, 90, 99, 70, 23, 55];
+
+  const anotherarray = ArrayNumber.slice().sort((a, b) => a - b);
+
+  const shoppingCart = [
+    {
+      id: 2,
+      product: "Mens Casual Premium Slim Fit T-Shirts ",
+      qty: 2,
+      price: 22.3,
+    },
+    {
+      id: 1,
+      product: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      qty: 1,
+      price: 109.95,
+    },
+
+    {
+      id: 4,
+      product: "Mens Casual Slim Fit",
+      qty: 1,
+      price: 15.99,
+    },
+    {
+      id: 3,
+      product: "Mens Cotton Jacket",
+      qty: 2,
+      price: 55.99,
+    },
+  ];
+  shoppingCart.sort((a, b) => b.id - a.id);
+  return (
+    <div className="App">
+      {console.log(ArrayNumber)}
+      <br />
+      {console.log(anotherarray)}
+      {console.log(shoppingCart)}
+    </div>
+  );
+}
+
+export default App;
